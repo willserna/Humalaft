@@ -1,0 +1,32 @@
+.branding {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+
+}
+
+.user-menu-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+ .logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 40px; /* Ajusta el espacio superior según tus necesidades */
+    margin-right: 20px;
+  }
+
+  .logo-img {
+    margin-top: -50px;
+    width: 200px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto;
+    cursor: pointer;
+  }
+
+  .header {
+    padding: 10px; /* Ajusta el espacio interno según tus necesidades */
+    box-sizing: border-box;
+  }

@@ -1,0 +1,15 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.app-root {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

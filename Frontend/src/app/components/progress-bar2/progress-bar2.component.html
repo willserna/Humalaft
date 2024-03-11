@@ -1,0 +1,4 @@
+<div class="progress-bar">
+  <div class="progress" [style.width]="progressWidth"></div>
+  <div *ngFor="let circle of circles" class="circle" [class.filled]="circle <= currentStep"></div>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="upload-container">
+    <input type="file" (change)="onFileSelected($event)" />
+    <button (click)="upload$.subscribe()">Subir Archivo</button>
+
+    <div *ngIf="upload$ | async" class="loading-message">
+      Cargando archivo...
+    </div>
+  </div>
+</div>

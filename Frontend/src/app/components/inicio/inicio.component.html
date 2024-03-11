@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="card">
+    <h2>Factores de riesgo</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Factor riesgo</th>
+          <th>Riesgo 1</th>
+          <th>Riesgo 2</th>
+          <th>Riesgo 3</th>
+          <th>Riesgo 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fila of tablaDatos">
+          <td>{{ fila.factorRiesgo }}</td>
+          <td>{{ fila.riesgo1 }}</td>
+          <td>{{ fila.riesgo2}}</td>
+          <td>{{ fila.riesgo3 }}</td>
+          <td>{{ fila.riesgo4}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="redirect-button" (click)="redirectToOtroComponente()">+ Ingresar nuevo actor</button>
+</div>

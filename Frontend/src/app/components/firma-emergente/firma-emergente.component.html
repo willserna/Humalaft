@@ -1,0 +1,18 @@
+<div class="dialog-overlay" *ngIf="visible">
+  <div class="dialog-box">
+    <ng-container *ngIf="formularioHijoFirmado; else contenidoAdvertencia">
+      <p>Formulario exitoso</p>
+      <p>Aquí va tu texto adicional.</p>
+      <button (click)="redirigirAExito()" class="dialog-button">Aceptar y adjuntar documentación</button>
+    </ng-container>
+
+    <ng-template #contenidoAdvertencia>
+      <h4 class="dialog-title">Advertencia</h4>
+    <h6>Recuerda que el actor No quedara activo en el sistema hasta que hayas finalizado este proceso y adjuntado la documentacion que te pediremos  a continuacion</h6>
+      <div class="dialog-buttons">
+        <button (click)="seleccionarOpcion(3)" class="dialog-button">Guardar y firmar después</button>
+        <button (click)="cerrarVentana()" class="dialog-button">Firmar ahora</button>
+      </div>
+    </ng-template>
+  </div>
+</div>

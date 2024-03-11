@@ -1,0 +1,19 @@
+<div class="user-menu" *ngIf="showMenu">
+  <img src="assets/user.jpg" alt="User Avatar" class="user-avatar" />
+
+
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>settings</mat-icon> Configuración
+    </button>
+    <button mat-menu-item (click)="cerrarSesion()">
+      <mat-icon>exit_to_app</mat-icon> Cerrar Sesión
+    </button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</div>
+

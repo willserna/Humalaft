@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -100px;
+}
+
+.custom-card {
+  width: 800px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rectangles {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.rectangle {
+  flex: 1;
+  height: 50px;
+  width: 170px;
+  background-color: transparent;
+  border: 1px solid #001f3f;
+  border-radius: 8px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rectangle p {
+  margin: 0;
+  color: #001f3f;
+}
+
+
+.rectangles .rectangle:last-child {
+  margin-right: 0;
+  flex-basis: 0;
+  width: 250px;
+  height: 50px;
+}
+
+.selected {
+  background-color: #001f3f;
+  color: white;
+}

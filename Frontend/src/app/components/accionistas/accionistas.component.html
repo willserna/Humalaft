@@ -1,0 +1,56 @@
+<div *ngIf="isPersonaNatural()">
+<h1 >Identificacion de accionistas, socios o representantes legales</h1>
+  <p>Identifique los datos de cada persona, empresa o entidad que tiene acciones en la sociedad. En el caso que cotice en bolsa, solo aquellos con tenencia, directa o inirecta de mas del +5% de las acciones. Para el caso de las Asociaciones indique quienes la conforman:</p>
+</div>
+
+<div *ngIf="isPersonaJuridica()">
+  <h1 >Identificacion miembros junta directiva</h1>
+    <p>Identifique los datos de cada persona, empresa o entidad que tiene acciones en la sociedad. En el caso que cotice en bolsa, solo aquellos con tenencia, directa o inirecta de mas del +5% de las acciones. Para el caso de las Asociaciones indique quienes la conforman:</p>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table-container">
+      <thead>
+        <tr>
+          <th>{{ tableHeaders[0] }}</th>
+          <th>{{ tableHeaders[1] }}</th>
+          <th>{{ tableHeaders[2] }}</th>
+          <th>{{ tableHeaders[3] }}</th>
+          <th *ngIf="isPersonaNatural()">{{ tableHeaders[4] }}</th>
+          <th *ngIf="isPersonaNatural()">{{ tableHeaders[5] }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of tableData; let i = index">
+          <td>
+            <input class="form-control" type="text" [(ngModel)]="tableData[i]['Nombre/Razon Social']">
+          </td>
+          <td>
+            <input class="form-control" type="text" [(ngModel)]="tableData[i]['Tipo de ID']">
+          </td>
+          <td>
+            <input class="form-control" type="text" [(ngModel)]="tableData[i]['Numero de Identificación']">
+          </td>
+          <td>
+            <input class="form-control" type="text" [(ngModel)]="tableData[i]['Nacionalidad']">
+          </td>
+          <td *ngIf="isPersonaNatural()">
+            <input class="form-control" type="text" [(ngModel)]="tableData[i]['PEPs']">
+          </td>
+          <td *ngIf="isPersonaNatural()">
+            <input class="form-control" type="text" [(ngModel)]="tableData[i]['% Propiedad accionaria']">
+          </td>
+        </tr>
+      </tbody>
+      <button class="btn btn-primary" id="btn" (click)="addRow()">Agregar Fila</button>
+    </table>
+  </div>
+
+  <div  *ngIf="isPersonaJuridica()"  class="custom-checkbox">
+    <input class="form-check-input" type="checkbox" id="check" name="check">
+    <label class="form-check-label" for="check">Mi empresa no tiene junta directa / No aplica</label>
+  </div>
+
+
+
+

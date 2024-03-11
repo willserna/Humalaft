@@ -1,0 +1,87 @@
+body, html {
+  margin: 0;
+}
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.login-image {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.top-right-title {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  text-align: right;
+}
+
+.logo-img {
+  width: 190px;
+  height: auto;
+}
+
+.top-right-title-text {
+  color: #001f3f;
+  font-weight: bold;
+}
+
+.login-form {
+  width: 400px;
+  margin-top: 20px;
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #001f3f;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.forgot-password {
+  display: block;
+  text-align: right;
+  margin-bottom: 10px;
+  color: #001f3f;
+}
+
+.login-button {
+  background-color: #001f3f;
+  color: white;
+  padding: 8px 4px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 10px;
+  width: 200px;
+
+}

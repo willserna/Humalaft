@@ -1,0 +1,12 @@
+<div class="progress-bar-container">
+  <div class="bar-container">
+    <div class="bar" [style.width]="lineWidth"></div>
+    <div class="circle-container">
+      <ng-container *ngFor="let circle of circles; let i = index">
+        <div class="circle" [class.filled]="isCircleFilled(i)">
+          <span class="circle-label" *ngIf="nombres[i]">{{ nombres[i] }}</span>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

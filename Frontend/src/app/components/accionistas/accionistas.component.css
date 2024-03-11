@@ -1,0 +1,54 @@
+.table-container {
+  border-collapse: collapse;
+  width: 70%;
+  margin-top: 30px;
+  margin-left: 50px;
+  background-color: rgb(245, 241, 241);
+}
+
+.table-container th, .table-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container .editable-cell {
+  position: relative;
+}
+
+.table-container .editable-cell input {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.table-container .editable-cell.active input {
+  display: block;
+}
+
+#btn {
+  background-color: rgb(1, 1, 18);
+  color: white;
+  border-radius: 10%;
+}
+
+h1 {
+  margin-top: 80px;
+  margin-left: 50px;
+}
+
+h2,p {
+  margin-top: 1%;
+  margin-left: 50px;
+}
+
+.custom-checkbox {
+  margin-right: 500px;
+}
+
+.custom-checkbox input {
+  width: 20px;
+  height: 20px;
+}
+
+

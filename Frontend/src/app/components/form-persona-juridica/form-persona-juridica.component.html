@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <app-progress-bar></app-progress-bar>
+  <div class="card mt-4">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+
+      <div class="button-container">
+        <button type="button" class="custom-button atras-button" (click)="onAtrasClick()">Volver</button>
+        <button type="submit" class="custom-button guardar-button" (click)="onEnviarClick()">Guardar y continuar</button>
+      </div>
+    </div>
+  </div>
+</div>
+

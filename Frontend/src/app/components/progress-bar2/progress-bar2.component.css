@@ -1,0 +1,46 @@
+.progress-bar {
+  position: relative;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.3s ease;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 50%;
+  border: 2px solid #4caf50;
+  transition: background-color 0.3s ease;
+}
+
+.circle.filled {
+  background-color: #4caf50;
+}
+
+.progress-container {
+  width: 100%;
+  z-index: 99;
+}
+
+.app-container {
+  margin-top: 80px;
+  padding-left: 250px;
+}
+
+.user-menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}

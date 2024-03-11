@@ -1,0 +1,13 @@
+<div class="header" *ngIf="shouldShowHeader()">
+  <p (click)="navigateTo('inicio')">
+   <img src="assets/HumaLaft.jpeg" alt="Logo" class="logo-img">
+  </p>
+</div>
+<div class="app-container">
+  <app-sidebar></app-sidebar>
+  <router-outlet></router-outlet>
+</div>
+
+<div class="user-menu-container">
+  <app-user-menu></app-user-menu>
+</div>

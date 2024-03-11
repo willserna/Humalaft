@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="custom-card" [class.sidebar-hidden]="rectanguloSeleccionado !== 0">
+    <h2>Agregar nuevo actor</h2>
+    <h3>Selecciona qué tipo de actor deseas ingresar al sistema</h3>
+
+    <div class="rectangles">
+      <div class="rectangle" (click)="seleccionarRectangulo(1)" [class.selected]="rectanguloSeleccionado === 1">
+        <p>Clientes</p>
+      </div>
+      <div class="rectangle" (click)="seleccionarRectangulo(2)" [class.selected]="rectanguloSeleccionado === 2">
+        <p>Proveedores</p>
+      </div>
+      <div class="rectangle" (click)="seleccionarRectangulo(3)" [class.selected]="rectanguloSeleccionado === 3">
+        <p>Empleados</p>
+      </div>
+      <div class="rectangle" (click)="seleccionarRectangulo(4)" [class.selected]="rectanguloSeleccionado === 4">
+        <p>Accionistas</p>
+      </div>
+      <div class="rectangle" (click)="seleccionarRectangulo(5)" [class.selected]="rectanguloSeleccionado === 5">
+        <p>Jurisdiccionistas</p>
+      </div>
+    </div>
+
+    <app-dialog-box *ngIf="rectanguloSeleccionado !== 0" (opcionSeleccionada)="redirigir($event)"></app-dialog-box>
+
+
+  </div>
+</div>

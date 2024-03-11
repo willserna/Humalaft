@@ -1,0 +1,57 @@
+<h1>Referencias bancarias (Minimo 30 dias)</h1>
+<div class="table-responsive">
+
+  <table class="table-container">
+    <thead>
+      <tr>
+        <th>{{ tableHeaders[0] }}</th>
+        <th>{{ tableHeaders[1] }}</th>
+        <th>{{ tableHeaders[2] }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of tableData; let i = index">
+        <td>
+          <input class="form-control" type="text" [(ngModel)]="tableData[i]['Banco / Nombre']">
+        </td>
+        <td>
+          <input class="form-control" type="text" [(ngModel)]="tableData[i]['Direccion / Ciudad']">
+        </td>
+        <td>
+          <input class="form-control" type="text" [(ngModel)]="tableData[i]['Telefono / Fax']">
+        </td>
+      </tr>
+    </tbody>
+    <button class="btn btn-primary" id="btn" (click)="addRow()">Agregar Fila</button>
+  </table>
+
+  <h1>Referencias comerciales (Minimo 30 dias)</h1>
+
+  <table class="table-container">
+    <thead>
+      <tr>
+        <th>{{ tableHeaders[0] }}</th>
+        <th>{{ tableHeaders[1] }}</th>
+        <th>{{ tableHeaders[2] }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of tableData; let i = index">
+        <td>
+          <input class="form-control" type="text" [(ngModel)]="tableData[i]['Banco / Nombre']">
+        </td>
+        <td>
+          <input class="form-control" type="text" [(ngModel)]="tableData[i]['Direccion / Ciudad']">
+        </td>
+        <td>
+          <input class="form-control" type="text" [(ngModel)]="tableData[i]['Telefono / Fax']">
+        </td>
+      </tr>
+    </tbody>
+    <button class="btn btn-primary" id="btn" (click)="addRow()">Agregar Fila</button>
+  </table>
+
+
+</div>
+
+

@@ -1,0 +1,100 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title mb-4">Información económica</h2>
+      <h3>Actividad económica</h3>
+
+      <form class="info-economica">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <input [(ngModel)]="objSocial" type="text" class="form-control form-control-sm" id="objSocial" name="objSocial" placeholder="Objeto social">
+              <input [(ngModel)]="codCiiu" type="text" class="form-control form-control-sm" id="codCiiu" name="codCiiu" placeholder="Codigo CIIU">
+            </div>
+
+            <div class="mb-3">
+              <input [(ngModel)]="docConst" type="text" class="form-control form-control-sm" id="docConst" name="docConst" placeholder="Documento Constitucion">
+            </div>
+            <div class="mb-3">
+              <input [(ngModel)]="nroMatricula" type="text" class="form-control form-control-sm" id="nroMatricula" name="nroMatricula" placeholder="No. Matricula Mercantil">
+              <input [(ngModel)]="capital" type="text" class="form-control form-control-sm" id="capital" name="capital" placeholder="Capital social registrado">
+            </div>
+
+            <div class="mb-3">
+              <input [(ngModel)]="servicio" type="text" class="form-control form-control-sm" id="servicio" name="servicio" placeholder="Bien o servicio a proveer">
+              <input [(ngModel)]="fecha" type="date" class="form-control form-control-sm" id="fecha" name="fecha" placeholder="Fecha de constitucion de la compañia">
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <h2 class="card-title mb-4">Certificaciones</h2>
+            <div class="mb-3">
+              <div class="d-flex align-items-center">
+                <input [(ngModel)]="certIso" type="text" class="form-control form-control-sm" id="certIso" name="certIso" placeholder="Certificaciones ISO">
+                <input [(ngModel)]="fechaInicio" type="date" class="form-control form-control-sm" id="fechaInicio" name="fechaInicio" placeholder="Fecha inicio del proceso">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex align-items-center">
+                <input [(ngModel)]="implementado" type="text" class="form-control form-control-sm" id="implementado" name="implementado" placeholder="% Implementado">
+                <div class="form-check form-check-inline">
+                  <input [(ngModel)]="enProceso" class="form-check-input" type="checkbox" id="check" name="check">
+                  <label class="form-check-label" for="check">En proceso de implementación</label>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <h2 class="card-title mb-4">Clasificación de la empresa</h2>
+            <div class="form-group">
+              <div class="checkbox-group">
+                <div *ngFor="let opcion of opciones; let i = index" class="horizontal-checkbox">
+                  <input type="checkbox"
+                         [(ngModel)]="seleccionadosClasificacion[i]"
+                         [value]="opcion"
+                         [name]="'clasificacion_' + i"
+                         (change)="onCheckboxChangeClasificacion(i)">
+                  <label>{{ opcion }}</label>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <div class="mb-3">
+              <h2 class="card-title mb-4">Información contable y tributaria</h2>
+              <div class="form-group horizontal-checkbox-group">
+                <div *ngFor="let opcion of opciones2; let i = index" class="horizontal-checkbox">
+                  <input type="checkbox"
+                         [(ngModel)]="seleccionadosOpciones2[i]"
+                         [value]="opcion"
+                         [name]="'contable_' + i"
+                         (change)="onCheckboxChangeOpciones2(i)">
+                  <label>{{ opcion }}</label>
+                </div>
+                <input [(ngModel)]="otroContable" type="text" class="form-control form-control-sm" id="otro" name="otro" placeholder="Otro - ¿Cuál?">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <h4 class="card-title mb-4">Condición de pago :</h4>
+              <div class="form-group horizontal-checkbox-group">
+                <div *ngFor="let opcion of opciones3; let i = index" class="horizontal-checkbox">
+                  <label>
+                    <input type="checkbox"
+                           [(ngModel)]="seleccionadosOpciones3[i]"
+                           [value]="opcion"
+                           [name]="'condicionPago_' + i"
+                           (change)="onCheckboxChangeOpciones3(i)">
+                    {{ opcion }}
+                  </label>
+                </div>
+                <input [(ngModel)]="otroCondicionPago" type="text" class="form-control form-control-sm" id="condicionPagoInput" name="condicionPagoInput" placeholder="Otro método de pago">
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="center-container">
+  <div class="card">
+    <h1>Adjuntar documentos | Persona Natural</h1>
+    <p>Estos documentos nos permitiran analizar la informacion de tu empresa y detectar factores de riesgo</p>
+
+    <div *ngFor="let rectangle of rectangles; let i = index" class="rectangle">
+      <div class="content">
+        <div class="text">{{ rectangle.text }}</div>
+        <div class="upload" *ngIf="i > 0">
+          <input type="file" id="fileInput{{ rectangle.id }}" (change)="onFileSelected($event)">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

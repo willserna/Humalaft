@@ -1,0 +1,35 @@
+<h1>Representantes legales y miebros significativos</h1>
+  <h2>Se hace referencia a todas las personas que registran en el Certificado de Existencia y Representacion Legal</h2>
+<div class="table-responsive">
+
+  <table class="table-container">
+    <thead>
+      <tr>
+        <th>{{ tableHeaders[0] }}</th>
+        <th>{{ tableHeaders[1] }}</th>
+        <th>{{ tableHeaders[2] }}</th>
+        <th>{{ tableHeaders[3] }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of tableData; let i = index">
+        <td>
+          <input class="form-control" type="text" [(ngModel)]="tableData[i]['Nombre/Razon Social']">
+        </td>
+        <td>
+          <input class="form-control" type="text" [(ngModel)]="tableData[i]['Tipo de ID']">
+        </td>
+        <td>
+          <input class="form-control" type="text" [(ngModel)]="tableData[i]['Numero de Identificación']">
+        </td>
+        <td>
+          <input class="form-control" type="text" [(ngModel)]="tableData[i]['Nacionalidad']">
+        </td>
+      </tr>
+    </tbody>
+    <button class="btn btn-primary" id="btn" (click)="addRow()">Agregar Fila</button>
+  </table>
+
+</div>
+
+

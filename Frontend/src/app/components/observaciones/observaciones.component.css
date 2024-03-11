@@ -1,0 +1,25 @@
+div {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+textarea {
+  margin-left: -300px;
+  width: 200%;
+  height: 200px;
+  resize: none;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-left: -315px;
+
+}
+
+
+p {
+  margin-left: -315px;
+  margin-top: -10px;
+}

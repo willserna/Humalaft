@@ -1,0 +1,68 @@
+<div class="sidebar" *ngIf="showSidebar">
+  <div class="sidebar" *ngIf="showSidebar">
+    <div class="sidebar-header" [ngClass]="{'selected': isSelected('Inicio')}">
+      <p (click)="toggleItem('Inicio'); navigateTo('inicio')">
+        <img src="assets/HumaLaft.jpeg" alt="Logo" class="logo-img">
+      </p>
+    </div>
+
+  <ul>
+    <li [routerLinkActive]="['active']" [routerLink]="['/inicio']" (click)="toggleItem('Inicio')">
+      <div class="list-item" [ngClass]="{'selected': isSelected('Inicio')}" [style.height]="calcularAlturaTotal()">
+        <span class="icon"><i class="fas fa-user-circle"></i></span> Inicio
+      </div>
+    </li>
+    <li [class.active]="isSelected('Visualizacion')" (click)="toggleItem('Visualizacion')">
+      <div class="list-item" [ngClass]="{'selected': isSelected('Visualizacion')}" [style.height]="calcularAlturaTotal()">
+        <span class="icon"><i class="fas fa-laptop"></i></span> Visualizacion
+      </div>
+
+      <ul *ngIf="isSelected('Visualizacion')" class="sub-list">
+        <li [class.active]="isSelectedSubItem('Diagnostico')" (click)="seleccionarSubItem('Diagnostico')">
+          <div class="sub-item"> >Diagnóstico</div>
+        </li>
+        <li [class.active]="isSelectedSubItem('Segmentacion')" (click)="seleccionarSubItem('Segmentacion')">
+          <div class="sub-item"> >Segmentación</div>
+        </li>
+        <li [class.active]="isSelectedSubItem('listas')" (click)="seleccionarSubItem('listas')">
+          <div class="sub-item"> >Listas</div>
+        </li>
+        <li [class.active]="isSelectedSubItem('operaciones')" (click)="seleccionarSubItem('operaciones')">
+          <div class="sub-item"> >Operaciones sospechosas</div>
+        </li>
+      </ul>
+    </li>
+
+    <li [class.active]="isSelected('Matriz de riesgos')" (click)="toggleItem('Matriz de riesgos')" (click)="navigateTo('matriz-riesgos')">
+      <div class="list-item" [ngClass]="{'selected': isSelected('Matriz de riesgos')}">
+        <span class="icon"><i class="fas fa-map-marker"></i></span> Matriz de riesgos
+      </div>
+    </li>
+
+
+    <li [class.active]="isSelected('Gestion de alertas')" (click)="toggleItem('Gestion de alertas');navigateTo('gestion-alertas')">
+      <div class="list-item" [ngClass]="{'selected': isSelected('Gestion de alertas')}">
+        <span class="icon"><i class="fas fa-user-secret"></i></span> Gestion de alertas
+      </div>
+    </li>
+
+
+    <li [class.active]="isSelected('Informes')" (click)="toggleItem('Informes'); navigateTo('informes')" [routerLinkActive]="['active']">
+      <div class="list-item" [ngClass]="{'selected': isSelected('Informes')}">
+        <span class="icon"><i class="fas fa-phone"></i></span> Informes
+      </div>
+    </li>
+
+    <li [class.active]="isSelected('Capacitaciones')" (click)="toggleItem('Capacitaciones')">
+      <div class="list-item" [ngClass]="{'selected': isSelected('Capacitaciones')}">
+        <span class="icon"><i class="fas fa-comments"></i></span> Capacitaciones
+      </div>
+    </li>
+
+    <li [class.active]="isSelected('Soporte')" (click)="toggleItem('Soporte')">
+      <div class="list-item" [ngClass]="{'selected': isSelected('Soporte')}">
+        <span class="icon"><i class="fas fa-envelope"></i></span> Soporte
+      </div>
+    </li>
+  </ul>
+</div>

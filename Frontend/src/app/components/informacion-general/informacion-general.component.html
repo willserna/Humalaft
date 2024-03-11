@@ -1,0 +1,69 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title mb-4">Información General</h2>
+      <h4>En cumplimiento a lo dispuesto en la circular Externa No. 0170 del 10 de octubre del 2002 de la Dirección de Impuestos y Aduanas Nacionales (DIAN) y Circular Básica Jurídica vigente de la Superintendencia de Sociedades; nos permitimos solicitar la siguiente información, adjuntando la documentación requerida.</h4>
+
+      <form class="info-general">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <input [(ngModel)]="nombre" type="text" class="form-control form-control-sm" id="nombre" name="nombre"
+                [placeholder]="isPersonaNatural() ? 'Nombre Completo' : 'Razón social'">
+
+              <input [(ngModel)]="documento" type="text" class="form-control form-control-sm" id="documento" name="documento"
+                placeholder="Nit / CC / CE / PP">
+            </div>
+            <div *ngIf="isPersonaJuridica()">
+              <div class="mb-3">
+                <input [(ngModel)]="repLegal" type="text" class="form-control form-control-sm" id="repLegal" name="repLegal"
+                  placeholder="Nombre Representante Legal">
+                <input [(ngModel)]="documentoRte" type="text" class="form-control form-control-sm" id="documentoRte"
+                  name="documentoRte" placeholder="Nit / CC / CE / PP">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="mb-3">
+              <input [(ngModel)]="direccion" type="text" class="form-control form-control-sm" id="direccion" name="direccion"
+                placeholder="Dirección">
+              <select [(ngModel)]="pais" class="form-control form-control-sm" id="pais" name="pais">
+                <option value="0">País</option>
+                <option value="1">Colombia</option>
+                <option value="2">Chile</option>
+                <option value="3">Japón</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <input [(ngModel)]="nombreContacto" type="text" class="form-control form-control-sm" id="nombreContacto"
+                name="nombreContacto" placeholder="Nombre del contacto">
+            </div>
+
+            <div class="mb-3">
+              <input [(ngModel)]="cargo" type="text" class="form-control form-control-sm" id="cargo" name="cargo"
+                placeholder="Cargo desempeñado (Últimos 2 años)">
+              <input [(ngModel)]="cargoAct" type="text" class="form-control form-control-sm" id="cargoAct" name="cargoAct"
+                placeholder="Cargo actual">
+            </div>
+
+            <div class="mb-3">
+              <input [(ngModel)]="correo" type="text" class="form-control form-control-sm" id="correo" name="correo"
+                placeholder="Correo electrónico">
+              <input [(ngModel)]="telefono" type="text" class="form-control form-control-sm" id="telefono" name="telefono"
+                placeholder="Teléfono fijo o Celular">
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="form-check mb-3">
+          <input [(ngModel)]="esPersonaPoliticaExpuesta" class="form-check-input" type="checkbox" id="esPersonaPoliticaExpuesta" name="esPersonaPoliticaExpuesta">
+          <label class="form-check-label" for="check">Persona Políticamente Expuesta (PEP): Decreto 1674 de 2016</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

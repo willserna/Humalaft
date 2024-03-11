@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title mb-4">Firma representante legal</h2>
+      <p>Ya estás a un solo paso de completar el formulario de conocimiento de contrapartes. Para finalizar, necesitamos la firma del representante legal a través de firma digital</p>
+
+      <div class="text-end">
+        <button type="button" [class]="'btn btn-primary' + (firmaRealizada ? ' firmada' : '')" (click)="onFirmarClick()">
+          {{ firmaRealizada ? 'Firma realizada' : 'Firmar ahora' }}
+          <ng-container *ngIf="firmaRealizada">
+            <i class="fas fa-check"></i>
+          </ng-container>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

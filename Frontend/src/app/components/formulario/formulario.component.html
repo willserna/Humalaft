@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div id="barra">
+    <app-progress-bar></app-progress-bar>
+  </div>
+  <div class="card mt-4">
+    <div class="card-body">
+    <!--   <router-outlet></router-outlet> -->
+
+      <app-informacion-general *ngIf="opcion == 1"  (informacionGuardada)="onInformacionGuardada($event)" #informacionGeneralComponent> </app-informacion-general>
+
+      <app-informacion-economica *ngIf="opcion == 2" (informacionEconomicaGuardada)="onInformacionGuardada($event)" #informacionEconomicaComponent></app-informacion-economica>
+
+      <app-representantes-legales *ngIf="opcion == 3"></app-representantes-legales>
+
+      <app-accionistas *ngIf="opcion == 4"></app-accionistas>
+
+      <app-referencias-bancarias *ngIf="opcion == 5"></app-referencias-bancarias>
+
+      <app-observaciones *ngIf="opcion == 6"></app-observaciones>
+
+      <app-firma *ngIf="opcion >= 7"></app-firma>
+      <div class="button-container">
+        <button *ngIf="opcion > 1" type="button" class="custom-button atras-button" (click)="onAtrasClick()">Volver</button>
+        <button  type="submit" class="custom-button guardar-button" (click)="onEnviarClick()">Guardar y continuar</button>
+
+        <app-firma-emergente *ngIf="mostrarFirmaEmergente"></app-firma-emergente>
+      </div>
+    </div>
+  </div>
+</div>
