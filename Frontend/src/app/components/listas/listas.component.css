@@ -11,8 +11,8 @@
   height: 80%; /* Adjust height as necessary, could be 100vh for full viewport height or any other value */
   overflow: hidden; /* Ensures no part of the image spills out of the container */
   object-fit: contain;
-  padding: 10px;
-  margin-right: 30px;
+  padding: 20px;
+  margin-right: 100px;
 }
 
 .image-container img {

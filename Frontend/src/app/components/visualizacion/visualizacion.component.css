@@ -1,12 +1,22 @@
 .center-container {
-  display: flex;
+  /*display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100vh;*/
+  display: flex;
+  justify-content: center; /* Centers the child horizontally */
+  align-items: center; /* Centers the child vertically */
+  height: 100vh; /* Makes the container fill the entire viewport height */
+  width: 100%; /* Makes the container fill the entire viewport width */
 }
 
 .center-content {
-  max-width: 600px;
+  /*ma-width: 600px;*/
+  display: flex;
+  flex-direction: column; /* Stacks the h1 and img vertically */
+  align-items: center; /* Centers the children horizontally within the container */
+  text-align: center; /* Ensures the text within the h1 is centered if it wraps */
+
 }
 
 .login-image {

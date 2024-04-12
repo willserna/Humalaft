@@ -15,13 +15,25 @@ export class InicioComponent {
   }
 
   generarDatosAleatorios() {
-    for (let i = 1; i <= 4; i++) {
+
+    const nombres = [
+      'Comercial/Clientes',
+      'Comercial/Proveedores',
+      'Gestion/Proveedores',
+      'Gestion humana/Gestion humana',
+      'Gerencia/Estrategia',
+      'Gerencia/Otros'
+  ];
+
+    for (let i = 0; i <= 5; i++) {
       const fila = {
-        factorRiesgo: `Factor Riesgo ${i}`,
+        factorRiesgo: nombres[i],
+        riesgo0: "Texto",
         riesgo1: Math.random(),
-        riesgo2: Math.random(),
+        riesgo2: "Texto",
         riesgo3: Math.random(),
-        riesgo4: Math.random()
+        riesgo4: "Texto"
+
       };
       this.tablaDatos.push(fila);
     }

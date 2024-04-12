@@ -1,7 +1,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .redirect-button {
@@ -12,24 +13,55 @@
   border-radius: 5px;
   cursor: pointer;
   margin-top: 5px;
-  margin-right: 280px;
+  margin-right: 120px;
   align-self: flex-end;
 }
 
 .card {
-  width: 60%;
-  margin: 110px auto 20px;
+  /*width: 60%;
+  margin: auto auto auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;*/
+  width: 80%; /* Adjust width as needed */
+  max-width: 1050px; /* Maximum width */
+  margin: 20px auto; /* Center the card horizontally */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto;
+  margin-right: 120px;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #f1f1f1;  /* Light grey background */
+  color: #333;               /* Dark text color */
+  text-align: right;        /* Aligns text to the right */
+  border-top: 1px solid #ccc; /* Subtle top border */
+  position: fixed;          /* Keeps footer fixed at the bottom of the viewport */
+  bottom: 0;
+  right: 0;                 /* Aligns the footer to the right side of the viewport */
+  width: calc(100% - 240px);
+
 }
 
 table {
+  /*width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  padding: 5px;*/
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
+
 
 th, td {
   border: 1px solid #ddd;
@@ -39,4 +71,10 @@ th, td {
 
 th {
   background-color: #f2f2f2;
+}
+@media screen and (max-width: 768px) {
+  th, td {
+    padding: 8px; /* Reduced padding */
+    font-size: 12px; /* Smaller font size */
+  }
 }

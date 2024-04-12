@@ -7,6 +7,8 @@ import { VisualizacionComponent } from './components/visualizacion/visualizacion
 import { MatrizRiesgosComponent } from './components/matriz-riesgos/matriz-riesgos.component';
 import { DiagnosticoComponent } from './components/diagnostico/diagnostico.component';
 import { SegmentacionComponent } from './components/segmentacion/segmentacion.component';
+import { ListasComponent } from './components/listas/listas.component';
+import { OperacionesComponent } from './components/operaciones/operaciones.component';
 import { InformesComponent } from './components/informes/informes.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AgregarActorComponent } from './components/agregar-actor/agregar-actor.component';
@@ -68,14 +70,10 @@ const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: '', component: LoginComponent },
   { path: 'sidebar', component: SidebarComponent },
-  {
-    path: 'virtualizacion',
-    component: VisualizacionComponent,
-    children: [
-      { path: 'diagnostico', component: DiagnosticoComponent },
-      { path: 'segmentacion', component: SegmentacionComponent }
-    ]
-  },
+  { path: 'diagnostico', component: DiagnosticoComponent},
+  { path: 'segmentacion', component: SegmentacionComponent},
+  { path: 'listas', component: ListasComponent},
+  { path: 'operaciones', component: OperacionesComponent},
   { path: 'matriz-riesgos', component: MatrizRiesgosComponent },
   { path: 'exito', component: AdjuntarDocumentosComponent }
 ];

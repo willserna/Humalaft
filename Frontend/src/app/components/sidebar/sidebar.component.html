@@ -18,17 +18,17 @@
       </div>
 
       <ul *ngIf="isSelected('Visualizacion')" class="sub-list">
-        <li [class.active]="isSelectedSubItem('Diagnostico')" (click)="seleccionarSubItem('Diagnostico')">
-          <div class="sub-item"> >Diagnóstico</div>
+        <li [class.active]="isSelectedSubItem('Diagnostico')" (click)="navigateTo('/diagnostico'); seleccionarSubItem('Diagnostico', $event)">
+          <div class="sub-item"> >Diagnóstico  General</div>
         </li>
-        <li [class.active]="isSelectedSubItem('Segmentacion')" (click)="seleccionarSubItem('Segmentacion')">
-          <div class="sub-item"> >Segmentación</div>
+        <li [class.active]="isSelectedSubItem('Segmentacion')" (click)="navigateTo('/segmentacion'); seleccionarSubItem('Segmentacion', $event)">
+          <div class="sub-item"> >Jurisdicciones</div>
         </li>
-        <li [class.active]="isSelectedSubItem('listas')" (click)="seleccionarSubItem('listas')">
-          <div class="sub-item"> >Listas</div>
+        <li [class.active]="isSelectedSubItem('listas')" (click)="navigateTo('/listas');seleccionarSubItem('listas', $event)">
+          <div class="sub-item"> >Estados financieros</div>
         </li>
-        <li [class.active]="isSelectedSubItem('operaciones')" (click)="seleccionarSubItem('operaciones')">
-          <div class="sub-item"> >Operaciones sospechosas</div>
+        <li [class.active]="isSelectedSubItem('operaciones')" (click)="navigateTo('/operaciones');seleccionarSubItem('operaciones', $event)">
+          <div class="sub-item"> >Operaciones Anomalas</div>
         </li>
       </ul>
     </li>

@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center cards vertically */
+  padding: 0px;
+
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+  grid-template-rows: repeat(2, auto); /* Creates two rows, height adjusts to content */
+  gap: 5px; /* Space between cards */
+  padding: 1px; /* Padding around the grid */
+  margin-left: 250px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes space evenly inside the card */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevents content from overflowing the card */
+}
+
+.card * {
+  margin: 5px 0; /* Adds a little margin to all elements inside the card */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ensures text doesn't spill out */
+}
+
+.redirect-button {
+  background-color: #001f3f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 80px;
+  align-self: flex-end;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #f1f1f1;  /* Light grey background */
+  color: #333;               /* Dark text color */
+  text-align: right;        /* Aligns text to the right */
+  border-top: 1px solid #ccc; /* Subtle top border */
+  position: fixed;          /* Keeps footer fixed at the bottom of the viewport */
+  bottom: 0;
+  right: 0;                 /* Aligns the footer to the right side of the viewport */
+  width: calc(100% - 240px);
+
+}
