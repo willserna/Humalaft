@@ -53,7 +53,7 @@
       </div>
     </li>
 
-    <li [class.active]="isSelected('Capacitaciones')" (click)="toggleItem('Capacitaciones')">
+    <li [class.active]="isSelected('Capacitaciones')" (click)="toggleItem('Capacitaciones'); navigateTo('capacitaciones')" [routerLinkActive]="['active']">
       <div class="list-item" [ngClass]="{'selected': isSelected('Capacitaciones')}">
         <span class="icon"><i class="fas fa-comments"></i></span> Capacitaciones
       </div>
