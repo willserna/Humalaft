@@ -2,6 +2,7 @@ package com.Humalaft.serviceactor.controllers;
 
 import com.Humalaft.serviceactor.models.Actor;
 import com.Humalaft.serviceactor.models.DocumentoAdjunto;
+import com.Humalaft.serviceactor.models.EntityInfo;
 import com.Humalaft.serviceactor.services.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,5 +23,10 @@ public class ActorController {
     @PostMapping("/")
     public Actor save(@RequestBody Actor actor){
       return  actorService.save(actor);
+    }
+
+    @GetMapping("/entityInfo")
+    public List<EntityInfo> getEntityInfos() {
+        return actorService.getAllEntityInfos();
     }
 }
