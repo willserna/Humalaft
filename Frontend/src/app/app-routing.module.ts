@@ -22,6 +22,7 @@ import { RepresentantesLegalesComponent } from './components/representantes-lega
 import { AccionistasComponent } from './components/accionistas/accionistas.component';
 import { ReferenciasBancariasComponent } from './components/referencias-bancarias/referencias-bancarias.component';
 import { ObservacionesComponent } from './components/observaciones/observaciones.component';
+import { CapacitacionesComponent } from './components/capacitaciones/capacitaciones.component';
 import { FirmaComponent } from './components/firma/firma.component';
 import { FormPersonaJuridicaComponent } from './components/form-persona-juridica/form-persona-juridica.component';
 import { AdjuntarDocumentosComponent } from './components/adjuntar-documentos/adjuntar-documentos.component';
@@ -74,6 +75,7 @@ const routes: Routes = [
   { path: 'segmentacion', component: SegmentacionComponent},
   { path: 'listas', component: ListasComponent},
   { path: 'operaciones', component: OperacionesComponent},
+  { path: 'capacitaciones', component: CapacitacionesComponent},
   { path: 'matriz-riesgos', component: MatrizRiesgosComponent },
   { path: 'exito', component: AdjuntarDocumentosComponent }
 ];

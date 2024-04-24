@@ -43,6 +43,9 @@ export class SidebarComponent implements OnInit{
     if (item === 'Soporte') {
       this.router.navigate(['/soporte']);
     }
+    if (item === 'Capacitaciones'){
+      this.router.navigate(['/capacitaciones'])
+    }
 
     if (this.selectedItems.has(item)) {
       this.selectedItems.delete(item);

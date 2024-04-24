@@ -1,0 +1,16 @@
+/* Styles for the container of the videos */
+.capacitaciones-videos {
+  display: flex; /* Use flexbox to align children */
+  flex-direction: column; /* Align children vertically */
+  align-items: center; /* Center-align children horizontally */
+  margin-left: 240px; /* Offset for the sidebar */
+  padding: 20px; /* Spacing around the content */
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Styles for each video */
+video {
+  width: 80%; /* Responsive width, change as needed */
+  max-width: 640px; /* Maximum width of the video */
+  margin-bottom: 20px; /* Space between the videos */
+}
