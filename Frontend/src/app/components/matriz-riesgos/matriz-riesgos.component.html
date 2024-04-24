@@ -1,3 +1,21 @@
-<app-inicio></app-inicio>
+<div class="container">
+  <h2>Riesgos de la Empresa</h2>
+  <div class="card-container">
+    <div *ngFor="let fila of tablaDatos" class="card">
+      <div><strong>Factor riesgo asociado:</strong> {{ fila.factorRiesgo }}</div>
+      <div><strong>Conocimiento:</strong> {{ fila.riesgo0 }}</div>
+      <div><strong>Riesgo inherente:</strong> {{ fila.riesgo1 }}</div>
+      <div><strong>Controles:</strong> {{ fila.riesgo2 }}</div>
+      <div><strong>Riesgo residual:</strong> {{ fila.riesgo3 }}</div>
+      <div><strong>Observaciones:</strong> {{ fila.riesgo4 }}</div>
+    </div>
+  </div>
+  <button class="redirect-button" (click)="redirectToOtroComponente()">+ Ingresar nuevo actor</button>
+
+</div>
+<footer class="footer">
+  <p>TEXTO LEGAL</p>
+</footer>
+
 
 

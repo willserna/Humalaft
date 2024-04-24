@@ -1,19 +1,21 @@
 <div class="container">
   <div class="card">
-    <h2>Factores de riesgo</h2>
+    <h2>Matriz de Riesgo de la Empresa</h2>
     <table>
       <thead>
         <tr>
-          <th>Factor riesgo</th>
-          <th>Riesgo 1</th>
-          <th>Riesgo 2</th>
-          <th>Riesgo 3</th>
-          <th>Riesgo 4</th>
+          <th>Factor riesgo asociado</th>
+          <th>Conocimiento</th>
+          <th>Riesgo inherente</th>
+          <th>Controles</th>
+          <th>Riesgo residual</th>
+          <th>Observaciones</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let fila of tablaDatos">
           <td>{{ fila.factorRiesgo }}</td>
+          <td>{{ fila.riesgo0 }}</td>
           <td>{{ fila.riesgo1 }}</td>
           <td>{{ fila.riesgo2}}</td>
           <td>{{ fila.riesgo3 }}</td>
@@ -24,3 +26,6 @@
   </div>
   <button class="redirect-button" (click)="redirectToOtroComponente()">+ Ingresar nuevo actor</button>
 </div>
+<footer class="footer">
+  <p>TEXTO LEGAL</p>
+</footer>

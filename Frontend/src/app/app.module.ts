@@ -13,6 +13,8 @@ import { VisualizacionComponent } from './components/visualizacion/visualizacion
 import { MatrizRiesgosComponent } from './components/matriz-riesgos/matriz-riesgos.component';
 import { DiagnosticoComponent } from './components/diagnostico/diagnostico.component';
 import { SegmentacionComponent } from './components/segmentacion/segmentacion.component';
+import { ListasComponent } from './components/listas/listas.component';
+import { OperacionesComponent } from './components/operaciones/operaciones.component';
 import { InformesComponent } from './components/informes/informes.component';
 import { EvidenciaConsultasComponent } from './components/evidencia-consultas/evidencia-consultas.component';
 import { AgregarActorComponent } from './components/agregar-actor/agregar-actor.component';
@@ -54,6 +56,8 @@ import { DatosService } from './services/datos.service';
     MatrizRiesgosComponent,
     DiagnosticoComponent,
     SegmentacionComponent,
+    ListasComponent,
+    OperacionesComponent,
     InformesComponent,
     EvidenciaConsultasComponent,
     AgregarActorComponent,

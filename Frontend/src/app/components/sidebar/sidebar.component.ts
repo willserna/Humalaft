@@ -22,7 +22,15 @@ export class SidebarComponent implements OnInit{
   }
 
   navigateTo(route: string): void {
-    this.router.navigate([route]);
+    //this.router.navigate([route]);
+    console.log("Navigating to:", route);
+    this.router.navigateByUrl(route).then(success => {
+      if (success) {
+        console.log("Navigation success");
+      } else {
+        console.log("Navigation failure");
+      }
+    }).catch(err => console.error("Navigation error:", err));
   }
 
   selectedItems: Set<string> = new Set<string>();
@@ -49,7 +57,8 @@ export class SidebarComponent implements OnInit{
     return this.selectedItems.has(item);
   }
 
-  seleccionarSubItem(subItem: string): void {
+  seleccionarSubItem(subItem: string, event: MouseEvent): void {
+    event.stopPropagation();
     this.selectedSubItem = subItem;
   }
 
